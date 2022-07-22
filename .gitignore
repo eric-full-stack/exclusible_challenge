@@ -1,0 +1,14 @@
+
+node_modules
+.ebextensions
+tmp/uploads/*
+!tmp/uploads/.gitkeep
+.editorconfig
+.env
+build
+dist
+.eslintignore
+.eslintrc.json
+coverage
+src/shared/errors/logs/*
+!src/shared/errors/logs/.gitkeep

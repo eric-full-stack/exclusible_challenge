@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS exclusible;
+CREATE DATABASE exclusible;
