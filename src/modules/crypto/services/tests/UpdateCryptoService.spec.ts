@@ -27,7 +27,7 @@ describe('UpdateCrypto', () => {
       spread: 5,
     });
 
-    const updatedBtc = updateCrypto.execute({
+    const updatedBtc = await updateCrypto.execute({
       ...btc,
       id: btc.id,
       rate: 1000,
@@ -35,7 +35,7 @@ describe('UpdateCrypto', () => {
 
     expect(btc).toHaveProperty('id');
     expect(btc.pair).toBe('BTC/USD');
-    expect(btc.rate).toBe(1000);
+    expect(updatedBtc.rate).toBe(1000);
 
     expect(eth).toHaveProperty('id');
     expect(eth.spread).toBe(5);
