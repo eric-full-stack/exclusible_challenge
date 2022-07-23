@@ -32,7 +32,11 @@ export default function KrakenWebsocket(wsServer: WebSocket) {
       const price = Number(parsed[1].a[0]);
       const pair = parsed[3];
       const crypto = await getCrypto.execute(pair);
-      wsServer.send(price + price * ((crypto?.spread || 0) / 100));
+      wsServer.send(
+        `{"pair": ${pair}, "rate": ${
+          price + price * ((crypto?.spread || 0) / 100)
+        }}`,
+      );
     }
   }
 }
