@@ -18,7 +18,8 @@ export default function KrakenWebsocket(wsServer: WebSocket) {
 
     const listAll = container.resolve(ListCryptosService);
     const cryptos = await listAll.execute();
-    const pairs = cryptos?.map(crypto => `"${crypto.pair}"`).join(',');
+    const pairs =
+      cryptos?.map(crypto => `"${crypto.pair}"`).join(',') || 'BTC/USD';
     const subscription = `{ "event": "subscribe", "subscription": { "name": "ticker" }, "pair": [${pairs}]}`;
 
     ws.send(subscription);
