@@ -23,4 +23,4 @@ Run `docker-compose up`
 
 ## Enjoy!
 
-Documentation: https://documenter.getpostman.com/view/3432878/UzXKVyiD
+Documentation: https://documenter.getpostman.com/view/3432878/UzXKWJWP
